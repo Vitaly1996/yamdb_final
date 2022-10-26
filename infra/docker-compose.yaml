@@ -6,20 +6,19 @@ services:
     volumes:
       - /var/lib/postgresql/data/
     env_file:
-      - ./.env_example
+      - ./.env
   web:
-    image: vitalysergeev/yamdb:v1.2
+    image: vitalysergeev/yamdb:latest
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
     depends_on:
       - db
     env_file:
-      - ./.env_example
+      - ./.env
 
   nginx:
     image: nginx:1.21.3-alpine
-
     ports:
       - "80:80"
 
