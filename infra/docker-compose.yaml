@@ -8,8 +8,7 @@ services:
     env_file:
       - ./.env_example
   web:
-    build: ../api_yamdb/
-    restart: always
+    image: vitalysergeev/yamdb:v1.2
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
