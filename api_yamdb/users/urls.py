@@ -1,6 +1,5 @@
-from django.urls import path, include
+from django.urls import include, path
 from rest_framework import routers
-
 from users.views import UserViewSet, new_user, update_token
 
 v1_router = routers.DefaultRouter()

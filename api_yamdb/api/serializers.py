@@ -1,7 +1,6 @@
 from django.shortcuts import get_object_or_404
 from rest_framework import serializers
-
-from reviews.models import Title, Genre, Categories, Review, Comments
+from reviews.models import Categories, Comments, Genre, Review, Title
 from reviews.validators import validate_year
 
 
